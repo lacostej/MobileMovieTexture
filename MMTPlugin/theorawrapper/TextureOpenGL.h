@@ -10,6 +10,11 @@
 #define __theorawrapper__TextureOpenGL__
 
 #if SUPPORT_OPENGL
+#if defined(linux)
+#include <GL/gl.h>
+#include <GL/glext.h>
+#endif
+
 #if defined(ANDROID)
 #include <GLES/gl.h>
 #endif

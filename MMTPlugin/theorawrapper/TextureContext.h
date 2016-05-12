@@ -9,25 +9,6 @@
 #ifndef theorawrapper_TextureContext_h
 #define theorawrapper_TextureContext_h
 
-#ifdef SUPPORT_D3D9
-#include <d3d9.h>
-#endif
-
-#if SUPPORT_OPENGL
-    #if defined(ANDROID)
-    #include <GLES/gl.h>
-    #endif
-
-    #if  defined (iOS)
-    #include <OpenGLES/ES1/gl.h>
-    #include <OpenGLES/ES2/glext.h>
-    #endif
-
-    #if  defined (OSX)
-    #include <OpenGL/gl.h>
-    #endif
-#endif
-
 #include "TextureHandle.h"
 
 struct th_dec_ctx;

@@ -49,26 +49,6 @@ static void Log(const char* fmt, ...)
 #include "MathHelpers.h"
 #include "TextureContext.h"
 
-#if SUPPORT_OPENGL
-#if defined(ANDROID)
-#include <GLES/gl.h>
-#endif
-
-#if  defined (iOS)
-#include <OpenGLES/ES1/gl.h>
-#include <OpenGLES/ES2/glext.h>
-#endif
-
-#if  defined (OSX)
-#include <OpenGL/gl.h>
-#endif
-
-#if defined(WIN32)
-#include <GL/gl.h>
-#pragma comment(lib, "opengl32.lib")
-#endif
-#endif
-
 #if defined(SUPPORT_METAL) && !defined(TARGET_IPHONE_SIMULATOR)
 #include "TextureMetal.h"
 #endif
